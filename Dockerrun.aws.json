@@ -1,6 +1,6 @@
 {
     "AWSEBDockerrunVersion": 2,
-    "containterDefinitions": [
+    "containerDefinitions": [
         {
             "name": "client",
             "image": "yolau010/multi-client",
