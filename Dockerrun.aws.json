@@ -1,0 +1,17 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containterDefinitions": [
+        {
+            "name": "client",
+            "image": "yolau010/multi-client",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "yolau010/multi-server",
+            "hostname": "client",
+            "essential": false
+        }
+    ]
+}
