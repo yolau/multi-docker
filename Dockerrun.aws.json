@@ -10,8 +10,27 @@
         {
             "name": "server",
             "image": "yolau010/multi-server",
-            "hostname": "client",
+            "hostname": "api",
             "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "yolau010/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "yolau010/multi-nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["client", "server"]
         }
     ]
 }
